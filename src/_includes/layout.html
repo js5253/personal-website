@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Sites</title>
-    <link rel="stylesheet" href="reset.css" />
+    <title>Jose Sanchez</title>
+    <link rel="stylesheet" href="/css/reset.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -24,22 +24,24 @@
             <li class="italics">
                 <h3>Web Development</h3>
             </li>
-            <li><a href="#" hx-get="portfolio.html" hx-push-url="true" hx-target="#page-contents">Portfolio</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
             <li class="italics">
                 <h3>Software Development</h3>
             </li>
-            <li><a href="#" hx-get="work-experience.html" hx-push-url="true" hx-target="#page-contents">Work
+            <li><a href="/work-experience">Work
                     Experience</a></li>
-            <li><a href="#" hx-get="projects.html" hx-push-url="true" hx-target="#page-contents">Projects</a></li>
+            <li><a href="/projects">Projects</a></li>
             <li class="italics">
                 <h3>Links</h3>
             </li>
-            <li><a href="resume_latest.pdf">Resume</a></li>
+            <li><a href="/resume_latest.pdf">Resume</a></li>
             <li><a href="https://github.com/js5253">GitHub</a></li>
+            <li><a href="/about">About</a></li>
         </ul>
     </nav>
-    <div id="page-contents" hx-get="portfolio.html" hx-trigger="load"></div>
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@4.0.0-beta6/dist/htmx.min.js" integrity="sha384-6lyVbhrs13b9z7mLOpt/N6R76rtkEBWgCjAXRs/DSWyi2AMnQSs10ijWk+PI8n7W" crossorigin="anonymous"></script>
+    <div id="page-contents">
+        {{content}}
+    </div>
 </body>
 
 </html>
