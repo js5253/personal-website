@@ -1,8 +1,7 @@
 export default function (eleventyConfig) {
   // Copy the `src/css/` directory to the output folder (e.g., _site/css/)
   eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy({"src/_redirects": "/"});
-  eleventyConfig.addPassthroughCopy({"public/*.pdf": "/"});
+  eleventyConfig.addPassthroughCopy({"public/*": "/"});
 
   return {
     dir: {
