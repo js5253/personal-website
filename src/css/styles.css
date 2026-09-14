@@ -111,3 +111,6 @@ header {
         flex-direction: row;
     }
 }
+.smaller {
+    font-size: .7rem;
+}
