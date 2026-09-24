@@ -1,23 +1,39 @@
+:root {
+    --background-color: #eeefdf;
+    --text-color: black;
+    --secondary-color: #666;
+    --link-color: blue;
+    --grid-color: rgba(0, 0, 0, 0.1) 1px
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #0c390f;
+        --text-color: white;
+        --link-color: white;
+        --secondary-color: #CCC;
+        --grid-color: #16691c;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-/* @view-transition {
-    navigation: auto;
-} */
 body {
     font-family: 'Fraunces', serif;
     padding: 40px;
     font-size: 1.2rem;
-    background-color: #eeefdf;
+    background-color: var(--background-color);
     background-size: 40px 40px;
     font-variation-settings:
         "WONK" 0, "SOFT" 100;
     background-image:
-        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
     border: solid white 16px;
     box-sizing: border-box;
+    color: var(--text-color);
 
 }
 
@@ -28,7 +44,7 @@ h1 {
 }
 
 h2 {
-    color: #666;
+    color: var(--secondary-color);
     font-size: 1.6rem;
     font-weight: 500;
 }
@@ -44,7 +60,7 @@ h4 {
 
 h5 {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--background-color);
     font-weight: 400;
 }
 .tagline {
@@ -64,12 +80,16 @@ nav {
     padding: 20px 0;
     border-top: dotted gray 4px;
     border-bottom: dotted gray 4px;
+    a, a:link {
+            color: var(--link-color);
+
+    }
 }
 
 
-a:link {
-    color: blue;
+a, a:link {
     transition: all 200ms;
+    color: var(blue);
 }
 
 a:hover {
