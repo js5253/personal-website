@@ -3,7 +3,8 @@
     --text-color: black;
     --secondary-color: #666;
     --link-color: blue;
-    --grid-color: rgba(0, 0, 0, 0.1) 1px
+    --grid-color: rgba(0, 0, 0, 0.1) 1px;
+    --absolute-color: white;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +14,7 @@
         --link-color: white;
         --secondary-color: #CCC;
         --grid-color: #16691c;
+        --absolute-color: black;
     }
 }
 
@@ -31,7 +33,7 @@ body {
     background-image:
         linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
         linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
-    border: solid white 16px;
+    border: solid var(--absolute-color) 16px;
     box-sizing: border-box;
     color: var(--text-color);
 
@@ -59,8 +61,8 @@ h4 {
 }
 
 h5 {
-    font-size: 1.2rem;
-    color: var(--background-color);
+    font-size: 1.3rem;
+    color: black;
     font-weight: 400;
 }
 .tagline {
