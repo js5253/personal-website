@@ -142,5 +142,5 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
-
+_redirects
 .DS_Store
