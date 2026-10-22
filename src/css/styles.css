@@ -68,7 +68,7 @@ body {
         justify-content: flex-end;
 
         img {
-            transform: rotateX(180deg);
+            transform: rotate(180deg);
         }
     }
 
