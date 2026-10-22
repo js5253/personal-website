@@ -1,74 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./css/styles_new.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>Jose Sanchez</title>
-  </head>
-  <body>
-    <header>
-      <h1>Jose Sanchez</h1>
-      <h3>I'm a software engineer, web developer, and more.</h3>
-    </header>
-    <main>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./css/styles_new.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Jose Sanchez</title>
+</head>
+
+<body>
+  <header>
+    <h1>Jose Sanchez</h1>
+    <h3>I'm a software engineer, web developer, and more.</h3>
+  </header>
+  <main>
     <div class="grid">
-      <div class="grid-i-outer">
+      <div class="grid-i-outer grid-i-selectable">
         <div class="grid-i-slide"><span class="fa-regular fa-code"></span></div>
+        <div class="grid-i-inner">Projects</div>
+      </div>
+      <div class="grid-i-outer">
+        <div class="grid-i-slide"></div>
+        <div class="grid-i-inner">AAAA</div>
+      </div>
+      <div class="grid-i-outer grid-i-selectable">
+        <div class="grid-i-slide"><span class="fa-regular fa-briefcase"></span></div>
+        <div class="grid-i-inner">Work Experience</div>
+      </div>
+      <div class="grid-i-outer grid-i-selectable">
+        <div class="grid-i-slide"></div>
+        <div class="grid-i-inner">AAAA</div>
+      </div>
+      <div class="grid-i-outer">
+        <div class="grid-i-slide"></div>
+        <div class="grid-i-inner">AAAA</div>
+      </div>
+      <div class="grid-i-outer">
+        <div class="grid-i-slide"></div>
+        <div class="grid-i-inner">AAAA</div>
+      </div>
+      <div class="grid-i-outer grid-i-selectable">
+        <div class="grid-i-slide"><span class="fa-sharp fa-solid fa-job"></span></div>
         <div class="grid-i-inner">Resume</div>
       </div>
-            <div class="grid-i-outer">
+      <div class="grid-i-outer">
         <div class="grid-i-slide"></div>
         <div class="grid-i-inner">AAAA</div>
       </div>
-            <div class="grid-i-outer">
-          <div class="grid-i-slide"><span class="fa-regular fa-briefcase"></span></div>
-        <div class="grid-i-inner">AAAA</div>
-      </div>
-            <div class="grid-i-outer">
-        <div class="grid-i-slide"></div>
-        <div class="grid-i-inner">AAAA</div>
-      </div>
-            <div class="grid-i-outer">
-        <div class="grid-i-slide"></div>
-        <div class="grid-i-inner">AAAA</div>
-      </div>
-            <div class="grid-i-outer">
-        <div class="grid-i-slide"></div>
-        <div class="grid-i-inner">AAAA</div>
-      </div>
-            <div class="grid-i-outer">
-        <div class="grid-i-slide"><span class="fa-sharp fa-solid fa-job"></span></div>
-        <div class="grid-i-inner">AAAA</div>
-      </div>
-            <div class="grid-i-outer">
-        <div class="grid-i-slide"></div>
-        <div class="grid-i-inner">AAAA</div>
-      </div>
-            <div class="grid-i-outer">
+      <div class="grid-i-outer grid-i-selectable">
         <div class="grid-i-slide"><span class="fa-regular fa-info"></span></div>
-        <div class="grid-i-inner">AAAA</div>
-      </div>
-      
-    </div>
-    </main>
-    <div>
-      <nav>
-        <ul>
-          <li>Portfolio</li>
-          <li>Projects</li>
-          <li>Work Experience</li>
-          <li>About</li>
-        </ul>
-      </nav>
-      <div>
-
+        <div class="grid-i-inner">About</div>
       </div>
     </div>
-    <!-- <footer>
+  </main>
+  </div>
+  </div>
+  <!-- <footer>
       <span><a href="/old">Accessibility Purposes: View this page in a more traditional format.</a></span>
     </footer> -->
-    <script src="./js/script.js"></script>
-  </body>
+  <script src="./js/script.js"></script>
+  {% if features.enablePrefetch %}
+  <script src="./js/prefetchContent.js"></script>
+  {%endif %}
+</body>
+
 </html>

@@ -1,0 +1,12 @@
+---
+permalink: /api/pages.json
+eleventyExcludeFromCollections: true
+---
+[
+{%- for page in collections.pages -%}
+  {
+    "title": {{ page.data.name | dump | safe }},
+    "url": "{{ page.url | escape }}"
+  }{% if not loop.last %}, {% endif %}
+  {%- endfor -%}
+]

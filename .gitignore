@@ -144,3 +144,5 @@ vite.config.ts.timestamp-*
 .vite/
 _redirects
 .DS_Store
+
+_site/

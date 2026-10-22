@@ -1,34 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/styles_new.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Jose Sanchez</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <h1>Jose Sanchez</h1>
-      <h3>I'm a software engineer, web developer, and more.</h3>
+        <h1>Jose Sanchez</h1>
+        <h3>I'm a software engineer, web developer, and more.</h3>
+        <nav>
+            <ul>
+                <ul>
+                    {%- for page in collections.pages -%}
+                    <li><a href="/{{page.data.name}}/" data-page-name="{{page.data.name}}">{{ page.data.name }}</a></li>
+                    {%- endfor -%}
+                </ul>
+            </ul>
+        </nav>
     </header>
-    <div>
-      <nav>
-        <ul>
-          <li>Portfolio</li>
-          <li>Projects</li>
-          <li>Work Experience</li>
-          <li>About</li>
-        </ul>
-      </nav>
-      <div>
+    <main>
         {{content}}
-      </div>
+    </main>
     </div>
     <!-- <footer>
       <span><a href="/old">Accessibility Purposes: View this page in a more traditional format.</a></span>
     </footer> -->
-    <script src="./js/script.js"></script>
-  </body>
+    <script src="/js/script.js"></script>
+</body>
+
 </html>

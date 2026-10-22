@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 
 :root {
-  --grid-item-size: 400px;
+  --grid-item-size: 33vw;
 }
 
 header {
@@ -38,7 +38,6 @@ h1 {
 }
 
 h2 {
-  color: var(--secondary-color);
   font-size: 1.6rem;
   font-weight: 500;
 }
@@ -54,7 +53,6 @@ h4 {
 
 h5 {
   font-size: 1.3rem;
-  color: black;
   font-weight: 400;
 }
 
@@ -63,7 +61,7 @@ h5 {
   grid-template-columns: auto auto auto;
   gap: 0;
   aspect-ratio: 1/1;
-  height: calc(50vh);
+  /* height: calc(50vh); */
 }
 
 .grid-i-outer {
@@ -98,7 +96,15 @@ h5 {
 }
 
 main {
-  animation: fade-out 600ms infinite;
+  padding: 20px;
+  /* animation: fade-out 600ms infinite */
+}
+.fadeOut {
+  animation: fade-out 600ms;
+}
+.fadeIn {
+    animation: fade-in 600ms;
+
 }
 
 nav {
@@ -108,9 +114,10 @@ nav {
     display: flex;
     flex-direction: row;
     list-style: none;
-
+    padding: 0;
   }
   li {
+    margin: 0;
     display: grid;
     place-items: center;
     padding: 12px;
@@ -147,6 +154,10 @@ nav {
   &:nth-of-type(3) .grid-i-slide {
     background: blue;
   }
+    &:nth-of-type(4) .grid-i-slide {
+    background: orange;
+  }
+
 
   &:nth-of-type(7) .grid-i-slide {
     background: yellow;
@@ -165,6 +176,15 @@ nav {
 
   to {
     color: transparent;
+  }
+}
+@keyframes fade-in {
+  from {
+    color: transparent;
+  }
+
+  to {
+    color: inherit;
   }
 }
 
