@@ -51,14 +51,14 @@ body {
 
 #theme-selector {
     float: right;
-    display: flex;
+    /* display: flex; */
     justify-content: flex-start;
     background-color: white;
     width: 60px;
     padding: 8px;
     border-radius: 50px;
     border: solid var(--secondary-color) 2px;
-    transition: all 200ms;
+    transition: all 300ms;
 
     &:hover {
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -69,6 +69,7 @@ body {
 
         img {
             transform: rotate(180deg);
+            left: 20px;
         }
     }
 
@@ -79,6 +80,10 @@ body {
         user-select: none;
         -webkit-user-drag: none;
         user-drag: none;
+        left: 0px;
+        transition: all 300ms cubic-bezier(0.95, 0.21, 0.26, 0.98);
+        transform: rotate(0deg);
+        position: relative;
     }
 }
 
@@ -137,7 +142,7 @@ nav {
 
 a,
 a:link {
-    transition: all 200ms;
+    transition: all 300ms;
     color: var(--link-color);
 }
 
