@@ -2,14 +2,14 @@
 layout: layout.html
 title: Projects
 ---
-<div id="project-filter">
-    <ul class="">
+<!-- <div id="project-filter">
+    <ul>
         Filter by: 
         <li><a href="" data-type="independent">Code On GitHub/Independent Project</a></li>
         <li><a href="" data-type="job-vail-systems">Vail Systems</a></li>
         <li><a href="" data-type="academic">CME Group</a></li>
         </ul>
-</div>
+</div> -->
     {% for project in collections.projects %}
     <div class="project" data-type="{{project.data.type}}">
         {% if project.data.type != 'independent' %}
