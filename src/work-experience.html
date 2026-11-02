@@ -1,9 +1,19 @@
 ---
 layout: layout.html
+title: Work Experience
 ---
-
-<h3>Work Experience</h3>
-<div class="project">
+    {% for project in collections.work-experience %}
+<div class="job">
+<h4>{{project.data.title}}</h4>
+{% if project.subtitle %}
+<h5>{{project.data.subtitle}}</h5>
+{% endif %}
+<ul>
+    {{project.content}}
+</ul>
+</div>
+    {% endfor %}
+<!-- <div class="project">
 <h4>Vail Systems</h4>
 <h5>Vail creates telephony software and APIs for businesses.</h5>
 <ul>
@@ -21,4 +31,4 @@ layout: layout.html
     <li>Worked on social media site for other apprentices to use, with React and Nest.JS</li>
     <li>Tutored apprentices on matters related to programming.</li>
 </ul>
-</div>
+</div> -->

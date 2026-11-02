@@ -1,49 +1,39 @@
 ---
 layout: layout.html
+title: Projects
 ---
-<h3>Projects</h3>
-<div class="project">
-    <h4>byte</h4>
-    <p class="tagline">A food logging and nutrition tracking app with a simple, intuitive twist: you just scan a picture of your food, and it automagically inputs it!</p>
-    <h5>Languages & Tools</h5>
-    <ul>
-        <li>Nest.js</li>
-        <li>Sequelize</li>
-        <li>MySQL</li>
-        <li>AWS EC2</li>
-    </ul>
-    <a href="https://github.com/amiro33/FoodFacts">View on GitHub</a>
+<div id="project-filter">
+    <ul class="">
+        Filter by: 
+        <li><a href="" data-type="independent">Code On GitHub/Independent Project</a></li>
+        <li><a href="" data-type="job-vail-systems">Vail Systems</a></li>
+        <li><a href="" data-type="academic">CME Group</a></li>
+        </ul>
 </div>
-<div class="project">
-    <h4>dict</h4>
-    <p class="tagline">Desktop app that creates a spoken-text file from a PDF, ePub, or DOCX.</p>
-    <h5>Languages & Tools</h5>
-    <ul>
-        <li>Tauri</li>
-        <li>Solid.js</li>
-        <li>Rust</li>
-        <li>Sherpa-ONNX</li>
+    {% for project in collections.projects %}
+    <div class="project" data-type="{{project.data.type}}">
+        {% if project.data.type != 'independent' %}
+        <h5>Part Of: {{project.data.type}}</h5>
+        {% endif %}
+        <h4>{{project.data.title}}</h4>
+        <p class="tagline">{{project.data.subtitle}}</p>
+        <h5>Languages & Tools</h5>
+        <ul>
+            {% for tool in project.data.technologiesUsed %}
+            <li>{{tool}}</li>
+            {% endfor %}
+        </ul>
+        {% if project.content %}
+        <h5>Project Specifics</h5>
+        <ul>
+            {{project.templateContent}}
+        </ul>
+        {% endif %}
+        {%if project.data.codeLink %}
+        <a href="{{project.data.codeLink}}">View on GitHub</a>
+        {% endif %}
+    </div>
+    {% else %}
+    <li>No posts found.</li>
+    {% endfor %}
     </ul>
-    <a href="https://github.com/js5253/pdf-tts-app">View on GitHub</a>
-</div>
-<div class="project">
-    <h4>drp·rs</h4>
-    <p class="tagline">Desktop utility to share the music you're playing with your Discord profile.</p>
-    <h5>Languages & Tools</h5>
-    <ul>
-        <li>Rust</li>
-        <li>Tokio (async development)</li>
-    </ul>
-    <a href="https://github.com/js5253/drp-rs">View on GitHub</a>
-</div>
-
-<!-- <div class="project">
-<h4>Spotilocker</h4>
-<h5>Languages & Tools</h5>
-<ul>
-    <li>Rust</li>
-    <li>Axum</li>
-    <li>SQLx</li>
-    </ul>
-<a href="#">View on GitHub</a>
-</div> -->
