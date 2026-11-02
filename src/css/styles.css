@@ -7,7 +7,7 @@
     --absolute-color: white;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #0c390f;
         --text-color: white;
@@ -16,7 +16,7 @@
         --grid-color: #16691c;
         --absolute-color: black;
     }
-}
+} */
 
 .dark {
     --background-color: #0c390f;
