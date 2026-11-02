@@ -1,4 +1,3 @@
-window.addEventListener('load', () => {
     const darkModeToggle = document.querySelector('#theme-selector');
     let manuallySpecifiedDarkMode = false;
     const body = document.querySelector('body');
@@ -13,17 +12,17 @@ window.addEventListener('load', () => {
     if (darkMode) {
         toggleDarkMode()
     }
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         if (manuallySpecifiedDarkMode) return;
+        darkMode = !darkMode
         toggleDarkMode()
     });
 
-    darkModeToggle.addEventListener('click', (e) => {
+    darkModeToggle.addEventListener('click', e => {
         e.preventDefault()
         darkMode = !darkMode;
         manuallySpecifiedDarkMode = true;
         toggleDarkMode()
     })
 
-})
 

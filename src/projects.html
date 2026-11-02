@@ -13,7 +13,7 @@ title: Projects
     {% for project in collections.projects %}
     <div class="project" data-type="{{project.data.type}}">
         {% if project.data.type != 'independent' %}
-        <h5>Part Of: {{project.data.type}}</h5>
+        <h5>Part Of: <a href="/work-experience#{{project.data.type}}">{{project.data.type}}</a></h5>
         {% endif %}
         <h4>{{project.data.title}}</h4>
         <p class="tagline">{{project.data.subtitle}}</p>
