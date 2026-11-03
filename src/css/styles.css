@@ -158,9 +158,23 @@ nav ul {
     padding: 0;
     align-items: flex-end;
 }
+a,
+a:link {
+    transition: all 300ms;
 
+}
+.button {
+    border: dotted lightgray 4px;
+    display: block;
+    padding: 8px;
+    width: fit-content;
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    color: var(--link-color);
+}
 nav {
-    padding: 20px 0;
+    padding: 2em 0;
     border-top: dotted gray 4px;
     border-bottom: dotted gray 4px;
     text-align: right;
@@ -173,11 +187,7 @@ nav {
 }
 
 
-a,
-a:link {
-    transition: all 300ms;
-    color: var(--link-color);
-}
+
 
 a:hover {
     font-style: italic;
