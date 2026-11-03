@@ -24,7 +24,7 @@
     --link-color: white;
     --secondary-color: #CCC;
     --grid-color: #16691c;
-    --absolute-color: black;
+    --absolute-color: rgb(42, 42, 42);
 
 }
 
@@ -35,7 +35,7 @@ html {
 body {
     font-family: 'Fraunces', serif;
     padding: 40px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background-color: var(--background-color);
     background-size: 40px 40px;
     font-variation-settings:
@@ -119,7 +119,7 @@ body {
 }
 
 h1 {
-    font-size: 3.6rem;
+    font-size: 3.3rem;
     font-style: italic;
     font-weight: 600;
 }
@@ -161,6 +161,7 @@ nav ul {
 a,
 a:link {
     transition: all 300ms;
+    color: var(--link-color);
 
 }
 .button {
@@ -172,9 +173,16 @@ a:link {
     text-decoration: none;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     color: var(--link-color);
+    &.btn-main {
+    background: var(--secondary-color);
+    color: white;
+    }
+}
+.button-container ul {
+    padding: 0;
 }
 nav {
-    padding: 2em 0;
+    padding: 1em 0;
     border-top: dotted gray 4px;
     border-bottom: dotted gray 4px;
     text-align: right;
@@ -184,6 +192,12 @@ nav {
         color: var(--link-color);
 
     }
+}
+.job-project-chip {
+    border: dotted lightgray 2px;
+    padding: .5em;
+    font-size: small;
+    border-radius: 15px;
 }
 
 
@@ -207,19 +221,20 @@ a:hover {
     min-height: 70vh;
     padding: 40px;
     margin-top: 40px;
-    transform: rotate(-1deg);
+    transform: rotate(-.5deg);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 header {
-    padding: 40px 0;
+    padding: 1.5em 0;
 }
 
 .job {
     margin-bottom: 5px;
     padding: 15px 0;
     &:target {
-        background-color: #EBEBEB;
+    background-color: color-mix(in srgb, var(--absolute-color), white 22%);
+    color: lighten;
     }
 }
 
@@ -235,6 +250,8 @@ header {
 @media screen and (width > 1000px) {
     #page-contents {
         max-width: 60vw;
+        transform: rotate(-1deg);
+
     }
 
     nav ul,

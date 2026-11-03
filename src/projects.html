@@ -13,7 +13,7 @@ title: Projects
     {% for project in collections.projects %}
     <div class="project" data-type="{{project.data.type}}">
         {% if project.data.type != 'independent' %}
-        <span>Part Of: <a href="/work-experience#{{project.data.type}}">{{project.data.type}}</a></span>
+        <span class="job-project-chip">Part Of: <a href="/work-experience#{{project.data.type}}">{{project.data.type}}</a></span>
         {% endif %}
         <h4>{{project.data.title}}</h4>
         <p class="tagline">{{project.data.subtitle}}</p>
@@ -30,7 +30,12 @@ title: Projects
         </ul>
         {% endif %}
         {%if project.data.codeLink %}
-        <a class="button" href="{{project.data.codeLink}}">View on GitHub</a>
+        <div class="button-container">
+            <ul style="list-style: none; display: flex; gap: 12px;">
+        <li><a class="button btn-main" href="">View Screenshots</a></li>
+        <li><a class="button" href="{{project.data.codeLink}}">View on GitHub</a></li>
+        </ul>
+        </div>
         {% endif %}
     </div>
     {% else %}
