@@ -45,7 +45,7 @@ As such, we keep track of every state:
 - At Work Time
 - At Break Time
 - Countdown Running (alterative mode) 
-- Timer Finished
+/- Timer Finished
 
 Ultimately, the code for tasks looks like this:
 
@@ -55,3 +55,4 @@ Ultimately, the code for tasks looks like this:
   // xTaskCreate(tfNetwork, "NetworkTask", 1000, NULL, 4, &tNetwork);
   // xTaskCreate(tfTimer, "TimerTask", 1000, NULL, 1, &tTimer);
 ```
+(to be continued...)
