@@ -33,6 +33,7 @@ html {
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Fraunces', serif;
     padding: 40px;
     font-size: 1.1rem;
@@ -48,7 +49,11 @@ body {
     color: var(--text-color);
 
 }
-
+.commentBox {
+    background: #EEE; 
+    display: block;
+    padding: 12px;
+}
 #project-filter {
     background: #EEE;
     padding: 16px;
@@ -277,4 +282,23 @@ header {
 
 .smaller {
     font-size: .7rem;
+}
+p {
+    margin: 1.25em 0;
+}
+ code {
+    background-color: #333;
+    color: lightgreen;
+    padding: 0 4px;
+}
+pre {
+    background-color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: scroll;
+}
+.post-end {
+    text-align: center;
+    font-size: 3em;
+    color: var(--secondary-color);
 }

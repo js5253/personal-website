@@ -1,10 +1,11 @@
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 export default function (eleventyConfig) {
   // Copy the `src/css/` directory to the output folder (e.g., _site/css/)
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy({"public/*": "/"});
-
+  eleventyConfig.addPlugin(syntaxHighlight);
   return {
     dir: {
       input: "src",    // Source files directory
