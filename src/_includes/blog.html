@@ -13,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- prefetch all pages -->
-     <link rel="prefetch" href="/portfolio" as="document" />
-     <link rel="prefetch" href="/work-experience" as="document" />
-     <link rel="prefetch" href="/projects" as="document" />
+    <link rel="prefetch" href="/portfolio" as="document" />
+    <link rel="prefetch" href="/work-experience" as="document" />
+    <link rel="prefetch" href="/projects" as="document" />
 </head>
 
 <body>
@@ -48,7 +48,7 @@
             <li><a href="/Resume.pdf">Resume</a></li>
             <li><a href="https://github.com/js5253">GitHub</a></li>
             <!-- <li><a href="/about#page-contents">About</a></li> -->
-             
+
         </ul>
     </nav>
     <div id="page-contents">
@@ -56,17 +56,19 @@
         <p>Posted on: {{page.date}}</p>
         <a class="button" href="/projects/{{relatedProject}}">View Related Project</a>
         {{content}}
-        <h3>Comments</h3>
+        <div class="post-end">&middot; &middot; &middot;</div>
+
+        <!-- <h3>Comments</h3>
         <p>No Comments Found.</p>
         <form class="commentBox" method="/comment">
             <h3>Add a comment</h3>
             <textarea type="text" name="comment" id="commentBox"></textarea>
             <label for="megatrons">How many r's are in <b>strawberrerry</b>?</label>
-            <input type="text" name="megatrons" id="megatrons"/>
-            <input type="submit" value="Submit" id="submitButton"/>
+            <input type="text" name="megatrons" id="megatrons" />
+            <input type="submit" value="Submit" id="submitButton" />
 
         </form>
-    </div>
+    </div> -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="/js/darkMode.js"></script>
     <script src="/js/comments.js"></script>

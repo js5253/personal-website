@@ -6,8 +6,9 @@ title: Blog
 <div class="job" id="{{project.data.slug}}">
     <h4>{{post.data.title}}</h4>
     <h5>{{post.data.subtitle}}</h5>
+            <p>{{page.date}}</p>
+
     <a href="{{post.url}}">Read Post</a>
-        {{post.content}}
 
 </div>
 {% endfor %}
