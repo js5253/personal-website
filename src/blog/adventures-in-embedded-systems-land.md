@@ -67,7 +67,7 @@ these tasks. These tasks are scheduled onto FreeRTOS with `xTaskCreate`, and
 essentially run a loop that allows the FreeRTOS scheduler to run other tasks when there is downtime. The code does this with `vTaskDelay`.
 
 There is, of course, a whole lot more to learn about scheduling: priority inversion, 
-pinning tasks to cores, and optimization. However, that would end up inflating a blog post even more. If you're interested in any of this, take a look at the OSTEP textbook which goes over scheduling in greater detail, and the resources in "Further Research" below.
+pinning tasks to cores, and optimization. However, that would end up inflating a blog post even more. If you're interested in any of this, take a look at the OSTEP textbook which goes over scheduling in greater detail, <!--and the resources in "Further Research" below.-->
 
 Ultimately we get a list of 4 tasks, each of which we have to schedule so they
 don't have priority conflicts. We also do have to set up some interrupts as
@@ -82,8 +82,8 @@ Lastly, we'll use a few libraries to simplify things.
 - Every peripheral has its own library with methods to interact, so
   Adafruit_SSD1306 and Adafruit_MPU6050 are instrumental.
 - ESP32-AudioI2S is a good way to add audio to our project.
-- From what I googled, NVS is _the_ way to store data
-- AsyncWebServer is one way to create a simple web server.
+- From what I googled, NVS is _the_ way to store data in an ESP32
+- AsyncWebServer is one way to create a simple web server, and it'll allow us to change the minutes.
 
 ### The State Machine
 
@@ -116,7 +116,7 @@ volatile AppState globalState = AppState::INIT;
     case WORKING:
 ```
 
-Ultimately, the code for tasks looks like this:
+Likewise, the code for tasks looks like this:
 
 ```c
 xTaskCreate(tfInteraction, "InteractionTask", 1000, NULL, 3, &tInteraction);
@@ -128,11 +128,11 @@ xTaskCreate(tfTimer, "TimerTask", 1000, NULL, 1, &tTimer);
 <!-- ### All the Physical Parts
 
 #### Protocols, and Connections
-
+--
 #### Making this... a product! (Finishing up)
 Here is where 
 ### The Complete Resources
 - **Full Images Here!**
 - [Code is here](https://github.com/js5253/pomodormo)
 - [CAD link here]()
-- [Enclosure here]() -->
+- [Enclosure here]()
