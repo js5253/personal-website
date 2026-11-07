@@ -152,6 +152,7 @@ h5 {
 
 .tagline {
     color: #999;
+    margin: 0;
     font-style: italic;
 }
 
@@ -208,8 +209,8 @@ nav {
 }
 
 .job-project-chip {
-    border: dotted lightgray 2px;
-    padding: .5em;
+    /* border: dotted lightgray 2px; */
+    padding: .5em 0;
     font-size: small;
     border-radius: 15px;
     width: fit-content;
@@ -247,6 +248,9 @@ header {
 .job {
     margin-bottom: 5px;
     padding: 15px 0;
+    &:not(:last-of-type) {
+        border-bottom: dotted lightgray 4px;
+    }
 
     &:target {
         background-color: color-mix(in srgb, var(--absolute-color), white 22%);

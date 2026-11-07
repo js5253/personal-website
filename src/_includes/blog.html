@@ -15,7 +15,7 @@
     <!-- prefetch all pages -->
     <link rel="prefetch" href="/portfolio" as="document" />
     <link rel="prefetch" href="/work-experience" as="document" />
-    <link rel="prefetch" href="/projects" as="document" />
+    <link rel="prefetch" href="/projects" as="document" />  
 </head>
 
 <body>
@@ -54,7 +54,7 @@
     <div id="page-contents">
         <h3>{{title}}</h3>
         <p>Posted on: {{page.date}}</p>
-        <a class="button" href="/projects/{{relatedProject}}">View Related Project</a>
+        <a class="button" href="/projects/{{relatedProject}}">View Related Project: {{relatedProject}}</a>
         {{content}}
         <div class="post-end">&middot; &middot; &middot;</div>
 
@@ -69,9 +69,9 @@
 
         </form>
     </div> -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="/js/darkMode.js"></script>
-    <script src="/js/comments.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="/js/darkMode.js"></script>
+        <script src="/js/comments.js"></script>
 </body>
 
 </html>
