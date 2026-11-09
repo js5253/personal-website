@@ -49,11 +49,13 @@ body {
     color: var(--text-color);
 
 }
+
 .commentBox {
-    background: #EEE; 
+    background: #EEE;
     display: block;
     padding: 12px;
 }
+
 #project-filter {
     background: #EEE;
     padding: 16px;
@@ -151,8 +153,9 @@ h5 {
 }
 
 .tagline {
-    color: #999;
+    color: var(--secondary-color);
     font-style: italic;
+    margin: .25em 0;
 }
 
 nav ul {
@@ -163,11 +166,13 @@ nav ul {
     padding: 0;
     align-items: flex-end;
 }
+
 a,
 a:link {
     transition: all 300ms;
 
 }
+
 .button {
     border: dotted lightgray 4px;
     display: block;
@@ -178,6 +183,7 @@ a:link {
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     color: var(--link-color);
 }
+
 nav {
     padding: 2em 0;
     border-top: dotted gray 4px;
@@ -223,14 +229,31 @@ header {
 .job {
     margin-bottom: 5px;
     padding: 15px 0;
-    &:target {
-        background-color: #EBEBEB;
-    }
+
+
+}
+
+.job:target,
+.project:target {
+
+    background-color: #EBEBEB;
+
 }
 
 .project {
     margin-bottom: 5px;
     padding: 15px 0;
+    position: relative;
+
+    &.featured::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.2;
+        background: url('/img/star.svg') no-repeat top right;
+        background-size: 100px;
+    }
 
     &:not(:last-of-type) {
         border-bottom: dotted lightgray 4px;
@@ -252,20 +275,24 @@ header {
 .smaller {
     font-size: .7rem;
 }
+
 p {
     margin: 1.25em 0;
 }
- code {
+
+code {
     background-color: #333;
     color: lightgreen;
     padding: 0 4px;
 }
+
 pre {
     background-color: #333;
     padding: 12px;
     border-radius: 8px;
     overflow-x: scroll;
 }
+
 .post-end {
     text-align: center;
     font-size: 3em;

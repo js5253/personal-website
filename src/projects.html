@@ -11,7 +11,7 @@ title: Projects
         </ul>
 </div> -->
     {% for project in collections.projects %}
-    <div class="project" data-type="{{project.data.type}}">
+    <div id="{{project.data.title}}" class="project {%if project.data.featured %} featured {%endif%}" data-type="{{project.data.type}}">
         {% if project.data.type != 'independent' %}
         <span>Part Of: <a href="/work-experience#{{project.data.type}}">{{project.data.type}}</a></span>
         {% endif %}
@@ -23,7 +23,7 @@ title: Projects
             <li>{{tool}}</li>
             {% endfor %}
         </ul>
-        {% if project.content %}
+        {% if project.templateContent and project.templateContent != "" %}
         <h5>Project Specifics</h5>
         <ul>
             {{project.templateContent}}
