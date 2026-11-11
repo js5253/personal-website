@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/project.astro
 type: job-vail-systems
 tags: projects
 title: API Service Admin Portal
