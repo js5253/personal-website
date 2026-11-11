@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+title: "Work Experience"
+const experiences = await getCollection('workExperience');
+
+---
+<Layout>
+{experiences.map(experience => (
+<div class="job" id={experience.id}>
+    <h4>{experience.data.title}</h4>
+    {experience.data.subtitle && <h5>{experience.data.subtitle}</h5>}
+    <ul>
+        {experience.body}
+    </ul>
+</div>
+
+))}
+</Layout>

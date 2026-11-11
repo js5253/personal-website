@@ -1,0 +1,10 @@
+---
+tags: work-experience
+title: Vail Systems
+subtitle: Vail creates telephony software and APIs for businesses.
+slug: job-vail-systems
+---
+    <li>Created extensible sample apps to showcase advanced usage of the Freeclimb voice/SMS platform - including
+        WebRTC.</li>
+    <li>Developed internal tools to manage user accounts.</li>
+    <li>Created tools to manage automated communications like text messages.</li>

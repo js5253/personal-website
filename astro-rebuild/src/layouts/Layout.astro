@@ -1,0 +1,37 @@
+---
+const { frontmatter, title, subtitle } = Astro.props;
+import Header from "../components/Header.astro";
+import NavBar from "../components/NavBar.astro";
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Sanchez</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- prefetch all pages -->
+     <link rel="prefetch" href="/portfolio" as="document" />
+     <link rel="prefetch" href="/work-experience" as="document" />
+     <link rel="prefetch" href="/projects" as="document" />
+</head>
+
+<body>
+    <Header />
+    <NavBar />
+    <div id="page-contents">
+        <h3>{title}</h3>
+       <h4>{subtitle}</h4>
+        <slot />
+    </div>
+    <script is:inline src="/js/darkMode.js"></script>
+</body>
+
+</html>
