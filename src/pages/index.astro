@@ -1,3 +1,8 @@
+---
+import Header from "../components/Header.astro";
+import NavBar from "../components/NavBar.astro";
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,37 +24,8 @@
 </head>
 
 <body>
-    <header>
-        <div id="theme-selector" tabindex="4">
-            <img class="theme-hint" width="15" height="15" src="/img/moon.png" />
-            <img id="active-mode-icon" class="" tabindex="1" width="20" height="20" src="/img/quarter-moon.png" />
-            <!-- <img id="match-system-icon" width="25" height="25" style="left: -22px;" src="/img/auto-mode.svg" /> -->
-            <img id="fix-sun-icon" class="theme-hint" width="22" height="22" src="/img/sun.png" />
-        </div>
-        <h1>Hey. I'm Jose Sanchez.</h1>
-        <h2>I'm a software engineer, web developer, and more.</h2>
-    </header>
-    <nav>
-        <ul>
-            <!-- <li class="italics">
-                    <h3>Web Development</h3>
-                </li>
-                <li><a href="/portfolio#page-contents">Portfolio</a></li> -->
-            <li class="italics">
-                <h3>Software Development</h3>
-            </li>
-            <li><a href="/work-experience#page-contents">Work
-                    Experience</a></li>
-            <li><a href="/projects#page-contents">Projects</a></li>
-            <li><a href="/blog#page-contents">Blog</a></li>
-            <li class="italics">
-                <h3>Links</h3>
-            </li>
-            <li><a href="/Resume.pdf">Resume</a></li>
-            <li><a href="https://github.com/js5253">GitHub</a></li>
-            <!-- <li><a href="/about#page-contents">About</a></li> -->
-        </ul>
-    </nav>
+    <Header />
+    <NavBar />
     <canvas width="1400px" height="1400px" id="falling-text"></canvas>
     <script>
         const text = ["RUST", "HTML", "REACT"];
@@ -96,7 +72,7 @@
         requestAnimationFrame(animate);
         //   ctx.fillText("Hello world", 10, 50);
     </script>
-    <script src="/js/darkMode.js"></script>
+    <script is:inline src="/js/darkMode.js"></script>
 </body>
 
 </html>

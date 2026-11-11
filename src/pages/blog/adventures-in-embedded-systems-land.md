@@ -2,8 +2,9 @@
 title: Adventures in EmbeddedSystems-land
 subtitle: Creating a pomodoro timer (...like one of those on TikTok) with an ESP32.
 tags: blogs
-layout: blog.html
+layout: ../../layouts/Blog.astro
 relatedProject: pomodomo
+date: 11-06-2026
 templateEngineOverride: njk,md #
 furtherResearch:
   - "https://pages.cs.wisc.edu/~remzi/OSTEP/"
