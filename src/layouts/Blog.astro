@@ -28,9 +28,9 @@ const { title,  frontmatter } = Astro.props;
     <Header />
     <NavBar />
     <div id="page-contents">
-        <h3>{title}</h3>
+        <h3>{frontmatter.title}</h3>
         <p>Posted on: {frontmatter.date}</p>
-        <a class="button" href={`/projects/${frontmatter.relatedProject}`}>View Related Project: {frontmatter.relatedProject}</a>
+        <a class="button" href={`/projects#${frontmatter.relatedProject}`}>View Related Project: {frontmatter.relatedProject}</a>
         <slot />
         <div class="post-end">&middot; &middot; &middot;</div>
 

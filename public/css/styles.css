@@ -55,7 +55,10 @@ body {
     padding: 12px;
 }
 #project-filter {
-    background: #EEE;
+    background: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
     padding: 16px;
     border-radius: 5px;
     margin: 10px 0;
