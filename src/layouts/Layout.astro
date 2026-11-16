@@ -22,10 +22,12 @@ import NavBar from "../components/NavBar.astro";
      <link rel="prefetch" href="/portfolio" as="document" />
      <link rel="prefetch" href="/work-experience" as="document" />
      <link rel="prefetch" href="/projects" as="document" />
-     <!-- <ClientRouter /> -->
+    <ClientRouter />
 </head>
 
 <body>
+    <Header transition:persist/>
+    <NavBar transition:persist/>
     <div id="page-contents">
         <h3>{title}</h3>
        <h4>{subtitle}</h4>

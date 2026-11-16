@@ -5,7 +5,8 @@ title: "Work Experience"
 const experiences = await getCollection('workExperience');
 ---
 <Layout title="Work Experience">
-{experiences.map(experience => (
+ <!-- @ts-expect-error random date error -->
+{experiences.sort((a, b) => (b.data.dateEnded - a.data.dateEnded)).map(experience => (
 <div class="job" id={experience.id}>
     <h4>{experience.data.title}</h4>
     {console.log(experience.data)}

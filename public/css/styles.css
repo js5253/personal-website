@@ -238,9 +238,9 @@ a:hover {
     color: var(--text-color);
 
     min-height: 70vh;
-    padding: 40px;
-    margin-top: 40px;
-    transform: rotate(-.5deg);
+    padding: 30px;
+    margin: 40px auto;
+    /* transform: rotate(-.5deg); */
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
@@ -276,7 +276,7 @@ header {
 @media screen and (width > 1000px) {
     #page-contents {
         max-width: 60vw;
-        transform: rotate(-1deg);
+        transform: rotate(-1.5deg);
 
     }
 

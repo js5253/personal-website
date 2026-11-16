@@ -1,4 +1,7 @@
-    const darkModeToggle = document.querySelector('#theme-selector');
+console.log("DARKMODE SCRIPT")
+
+const onload = () => {
+const darkModeToggle = document.querySelector('#theme-selector');
     let manuallySpecifiedDarkMode = false;
     const body = document.querySelector('body');
     let darkMode = localStorage.getItem('dark') || window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -24,5 +27,7 @@
         manuallySpecifiedDarkMode = true;
         toggleDarkMode()
     })
+}
 
-
+document.addEventListener('load', onload)
+document.addEventListener('astro:page-load', onload)

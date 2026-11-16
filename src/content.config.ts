@@ -14,6 +14,7 @@ const blog = defineCollection({
         title: z.string(),
         subtitle: z.string(),
         date: z.coerce.date().optional(),
+        furtherResearch: z.array(z.url()).optional()
     }),
 });
 
@@ -34,8 +35,8 @@ const workExperience = defineCollection({
     schema: z.object({
         title: z.string(),
         subtitle: z.string().optional(),
-        dateStarted: z.coerce.date().nullish(),
-        dateEnded: z.coerce.date().optional()
+        dateStarted: z.coerce.date(),
+        dateEnded: z.coerce.date(),
     }),
 });
 // 5. Export a single `collections` object to register your collection(s)
