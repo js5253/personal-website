@@ -8,6 +8,14 @@ const experiences = await getCollection('workExperience');
 {experiences.map(experience => (
 <div class="job" id={experience.id}>
     <h4>{experience.data.title}</h4>
+    {console.log(experience.data)}
+    <span class="experienceDate">{experience.data.dateStarted && experience.data.dateEnded && experience.data.dateStarted?.toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'long'
+    })} - {experience.data.dateEnded?.toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'long'
+    })}</span>
     {experience.data.subtitle && <h5>{experience.data.subtitle}</h5>}
     <ul set:html={experience.body}>
         

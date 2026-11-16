@@ -309,3 +309,8 @@ pre {
     font-size: 3em;
     color: var(--secondary-color);
 }
+.experienceDate {
+    text-align: right;
+    display: block;
+    font-style: italic;
+}
