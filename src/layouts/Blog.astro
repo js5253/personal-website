@@ -5,38 +5,46 @@ import ogs from 'open-graph-scraper';
 import type { FurtherResearchResult } from '../types/OGSResultType'
 import ClientRouter from "astro/components/ClientRouter.astro";
 import Layout from "./Layout.astro";
-const { title,  frontmatter } = Astro.props;
+const { title, frontmatter } = Astro.props;
 
 const furtherResearch: Array<FurtherResearchResult>  = [];
 
-frontmatter.furtherResearch.forEach(async (url: string) => {
+frontmatter.furtherResearch?.map(async (url: string) => {
     const options = {url};
+    try {
     const result = await ogs(options);
-
     if (result.error) {
-        furtherResearch.push({
-            url,
-            title: url,
-            description: url
-        });
-    }
+        throw new Error()
+    } else {
     const details = result.response as any;
     furtherResearch.push({
         title: details.ogTitle,
         description: details.ogDescription,
         url
     });
+    }
+    } catch(e) {
+        furtherResearch.push({
+            url,
+            title: url,
+            description: url
+        });
+    }
 })
+    console.log(furtherResearch)
 ---
     <Layout>
     <h3>{frontmatter.title}</h3>
     <h4>{frontmatter.subtitle}</h4>
+        <slot />
+
     <div class="post-end">&middot; &middot; &middot;</div>
+    {frontmatter.furtherResearch && <>
         <h3>Further Reading</h3>
-        <ul>
-            {furtherResearch.map(link => {
-            return <a href={link.url}>{link.title}</a>
-            })}
-        </ul>
-    <slot />
+    <ul>
+        {frontmatter.furtherResearch?.map(link => {
+        return <a href={link.url}>{link.title}</a>
+        })}
+    </ul> 
+    </>}
 </Layout>

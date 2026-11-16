@@ -7,8 +7,8 @@ relatedProject: pomodomo
 date: 11-06-2026
 templateEngineOverride: njk,md #
 furtherResearch:
-  - https://pages.cs.wisc.edu/~remzi/OSTEP/
-  - https://percepio.com/tag/rtos-101/
+  # - https://pages.cs.wisc.edu/~remzi/OSTEP/
+  # - https://percepio.com/tag/rtos-101/
 ---
 
 One of the things that surprises me about the technology we use is how cheap it
@@ -138,15 +138,3 @@ xTaskCreate(tfIMU, "IMUTask", 1000, NULL, 2, &tIMU);
 xTaskCreate(tfNetwork, "NetworkTask", 1000, NULL, 4, &tNetwork);
 xTaskCreate(tfTimer, "TimerTask", 1000, NULL, 1, &tTimer);
 ```
-
-<!-- ### All the Physical Parts
-
-#### Protocols, and Connections
---
-#### Making this... a product! (Finishing up)
-Here is where
-### The Complete Resources
-- **Full Images Here!**
-- [Code is here](https://github.com/js5253/pomodormo)
-- [CAD link here]()
-- [Enclosure here]()
