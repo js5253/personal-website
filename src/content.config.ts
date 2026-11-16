@@ -33,7 +33,9 @@ const workExperience = defineCollection({
     loader: glob({ base: './src/pages/work-experience', pattern: '**/*.{md,mdx}' }),
     schema: z.object({
         title: z.string(),
-        subtitle: z.string().optional()
+        subtitle: z.string().optional(),
+        dateStarted: z.coerce.date().nullish(),
+        dateEnded: z.coerce.date().optional()
     }),
 });
 // 5. Export a single `collections` object to register your collection(s)

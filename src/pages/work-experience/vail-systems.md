@@ -3,6 +3,8 @@ tags: work-experience
 title: Vail Systems
 subtitle: Vail creates telephony software and APIs for businesses.
 slug: job-vail-systems
+dateStarted: 2022-08-01
+dateEnded: 2026-06-01
 ---
     <li>Created extensible sample apps to showcase advanced usage of the Freeclimb voice/SMS platform - including
         WebRTC.</li>
