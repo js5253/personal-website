@@ -2,10 +2,11 @@
 type: job-vail-systems
 tags: projects
 title: Customer Service Communication Platform
+subtitle: A full-stack webapp, similar to Google Voice, to simplify communication between customer service agents and customers. Featured speech recognition and summarization.
 technologiesUsed:
-    - Nest.js
-    - Sequelize
-    - MySQL
+    - Next.js
+    - Prisma
+
 ---
 <li>Accelerated project onboarding by scaffolding a Next.js project from scratch, establishing CI/CD pipelines and Jest tests. Translated business needs into Jira tickets
 and technology decisions. </li>
