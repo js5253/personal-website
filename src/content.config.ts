@@ -26,7 +26,8 @@ const project = defineCollection({
         subtitle: z.string().optional(),
         technologiesUsed: z.array(z.string()).optional(),
         codeLink: z.string().optional(),
-        screenshots: z.array(z.string()).optional()
+        screenshots: z.array(z.string()).optional(),
+        highlights: z.array(z.string())
     }),
 });
 

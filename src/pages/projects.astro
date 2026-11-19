@@ -29,7 +29,8 @@ title: "Projects"
         {project.body &&
         <>
         <h5>Project Specifics</h5>
-        <ul set:html={project.body}>
+        <ul>
+            {project.data.highlights.map(item => <li>{item}</li>)}
         </ul>
         </>}
 
